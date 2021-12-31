@@ -2,11 +2,20 @@ package com.careerinfotech.usermanagement.dto;
 
 public class UserSignIn {
 	
+	private Long id;
 	private String email;
 	private String password;
 	
 	public UserSignIn() {
 		// TODO Auto-generated constructor stub
+	}
+
+	public Long getId() {
+		return id;
+	}
+
+	public void setId(Long id) {
+		this.id = id;
 	}
 
 	public String getEmail() {
@@ -25,17 +34,19 @@ public class UserSignIn {
 		this.password = password;
 	}
 
-	public UserSignIn(String email, String password) {
+	public UserSignIn(Long id, String email, String password) {
 		super();
+		this.id = id;
 		this.email = email;
 		this.password = password;
 	}
 
 	@Override
 	public String toString() {
-		return "UserSignIn [email=" + email + ", password=" + password + "]";
+		return "UserSignIn [id=" + id + ", email=" + email + ", password=" + password + "]";
 	}
 	
 	
 
+	
 }

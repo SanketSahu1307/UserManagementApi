@@ -3,20 +3,22 @@ package com.careerinfotech.usermanagement.dto;
 import java.time.LocalDateTime;
 import java.util.Date;
 
+
 public class UserSignUp {
 
-	private Long user_id;
-	private String first_name;
-	private String last_name;
+	private Long userId;
+	private String firstName;
+	private String lastName;
 	private String email;
-	private String phone_no;
-	private Date date;
+	private String phoneNo;
+	private String dob;
+	private Date date =new Date();
 	private String gender;
-	private String account_status;
+	private String accountStatus;
 
-	private Long country_id;
-	private Long states_id;
-	private Long city_id;
+	private Long countryId;
+	private Long statesId;
+	private Long cityId;
 
 	private String createdBy;
 	private String updatedBy;
@@ -27,28 +29,28 @@ public class UserSignUp {
 		// TODO Auto-generated constructor stub
 	}
 
-	public Long getUser_id() {
-		return user_id;
+	public Long getUserId() {
+		return userId;
 	}
 
-	public void setUser_id(Long user_id) {
-		this.user_id = user_id;
+	public void setUserId(Long userId) {
+		this.userId = userId;
 	}
 
-	public String getFirst_name() {
-		return first_name;
+	public String getFirstName() {
+		return firstName;
 	}
 
-	public void setFirst_name(String first_name) {
-		this.first_name = first_name;
+	public void setFirstName(String firstName) {
+		this.firstName = firstName;
 	}
 
-	public String getLast_name() {
-		return last_name;
+	public String getLastName() {
+		return lastName;
 	}
 
-	public void setLast_name(String last_name) {
-		this.last_name = last_name;
+	public void setLastName(String lastName) {
+		this.lastName = lastName;
 	}
 
 	public String getEmail() {
@@ -59,12 +61,20 @@ public class UserSignUp {
 		this.email = email;
 	}
 
-	public String getPhone_no() {
-		return phone_no;
+	public String getPhoneNo() {
+		return phoneNo;
 	}
 
-	public void setPhone_no(String phone_no) {
-		this.phone_no = phone_no;
+	public void setPhoneNo(String phoneNo) {
+		this.phoneNo = phoneNo;
+	}
+
+	public String getDob() {
+		return dob;
+	}
+
+	public void setDob(String dob) {
+		this.dob = dob;
 	}
 
 	public Date getDate() {
@@ -83,36 +93,36 @@ public class UserSignUp {
 		this.gender = gender;
 	}
 
-	public String getAccount_status() {
-		return account_status;
+	public String getAccountStatus() {
+		return accountStatus;
 	}
 
-	public void setAccount_status(String account_status) {
-		this.account_status = account_status;
+	public void setAccountStatus(String accountStatus) {
+		this.accountStatus = accountStatus;
 	}
 
-	public Long getCountry_id() {
-		return country_id;
+	public Long getCountryId() {
+		return countryId;
 	}
 
-	public void setCountry_id(Long country_id) {
-		this.country_id = country_id;
+	public void setCountryId(Long countryId) {
+		this.countryId = countryId;
 	}
 
-	public Long getStates_id() {
-		return states_id;
+	public Long getStatesId() {
+		return statesId;
 	}
 
-	public void setStates_id(Long states_id) {
-		this.states_id = states_id;
+	public void setStatesId(Long statesId) {
+		this.statesId = statesId;
 	}
 
-	public Long getCity_id() {
-		return city_id;
+	public Long getCityId() {
+		return cityId;
 	}
 
-	public void setCity_id(Long city_id) {
-		this.city_id = city_id;
+	public void setCityId(Long cityId) {
+		this.cityId = cityId;
 	}
 
 	public String getCreatedBy() {
@@ -147,21 +157,22 @@ public class UserSignUp {
 		this.updateOn = updateOn;
 	}
 
-	public UserSignUp(Long user_id, String first_name, String last_name, String email, String phone_no, Date date,
-			String gender, String account_status, Long country_id, Long states_id, Long city_id, String createdBy,
-			String updatedBy, LocalDateTime createOn, LocalDateTime updateOn) {
+	public UserSignUp(Long userId, String firstName, String lastName, String email, String phoneNo, String dob,
+			Date date, String gender, String accountStatus, Long countryId, Long statesId, Long cityId,
+			String createdBy, String updatedBy, LocalDateTime createOn, LocalDateTime updateOn) {
 		super();
-		this.user_id = user_id;
-		this.first_name = first_name;
-		this.last_name = last_name;
+		this.userId = userId;
+		this.firstName = firstName;
+		this.lastName = lastName;
 		this.email = email;
-		this.phone_no = phone_no;
+		this.phoneNo = phoneNo;
+		this.dob = dob;
 		this.date = date;
 		this.gender = gender;
-		this.account_status = account_status;
-		this.country_id = country_id;
-		this.states_id = states_id;
-		this.city_id = city_id;
+		this.accountStatus = accountStatus;
+		this.countryId = countryId;
+		this.statesId = statesId;
+		this.cityId = cityId;
 		this.createdBy = createdBy;
 		this.updatedBy = updatedBy;
 		this.createOn = createOn;
@@ -170,11 +181,12 @@ public class UserSignUp {
 
 	@Override
 	public String toString() {
-		return "UserSignUp [user_id=" + user_id + ", first_name=" + first_name + ", last_name=" + last_name + ", email="
-				+ email + ", phone_no=" + phone_no + ", date=" + date + ", gender=" + gender + ", account_status="
-				+ account_status + ", country_id=" + country_id + ", states_id=" + states_id + ", city_id=" + city_id
-				+ ", createdBy=" + createdBy + ", updatedBy=" + updatedBy + ", createOn=" + createOn + ", updateOn="
-				+ updateOn + "]";
+		return "UserSignUp [userId=" + userId + ", firstName=" + firstName + ", lastName=" + lastName + ", email="
+				+ email + ", phoneNo=" + phoneNo + ", dob=" + dob + ", date=" + date + ", gender=" + gender
+				+ ", accountStatus=" + accountStatus + ", countryId=" + countryId + ", statesId=" + statesId
+				+ ", cityId=" + cityId + ", createdBy=" + createdBy + ", updatedBy=" + updatedBy + ", createOn="
+				+ createOn + ", updateOn=" + updateOn + "]";
 	}
 
+	
 }
